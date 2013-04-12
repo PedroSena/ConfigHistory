@@ -1,0 +1,3 @@
+class ConfigurationReader
+  
+end
