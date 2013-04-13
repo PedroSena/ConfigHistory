@@ -7,6 +7,8 @@ require 'configuration_reader'
 describe ConfigurationReader do
   it "should load the configuration file" do
     reader = ConfigurationReader.new
-    reader.config.should_not be_nil
+    reader.time_frame.should_not be_nil
+    reader.log_level.should_not be_nil
+    reader.sections.length.should > 0
   end
 end

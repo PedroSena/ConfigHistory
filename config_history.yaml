@@ -5,6 +5,6 @@ general:
       apache2:
         base_directory: '/etc/apache2'
         files_matching: '*.conf'
-        files_matching:  'magic'
+        files_matching: 'magic'
         files_matching: 'sites-enabled/*'
         ignore_files_matching: 'sites-enabled/teste'
