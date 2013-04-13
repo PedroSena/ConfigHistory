@@ -12,7 +12,12 @@ class ConfigurationReader
     @log_level = config["general"]["log_level"]
     @log_level = "info" unless %w(debug info warning error).include? @log_level
     @sections = []
+    raise "You should have at least one section" if config["general"]["sections"].nil?
     config["general"]["sections"].each do |name,content|
+      raise "You forgot that the section name goes as first parameter on a section" unless content.is_a? Hash
+      ['base_directory','files_matching'].each do |key|
+        raise "#{key} missing in section #{name}" if content[key].nil?
+      end
       @sections << Section.new(name,content["base_directory"],content["files_matching"],content["ignore_files_matching"])
     end
   end

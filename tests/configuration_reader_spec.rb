@@ -1,7 +1,6 @@
 INSTALL_DIR = File.dirname(__FILE__) + '/../'
 Dir[INSTALL_DIR + "lib/**/*.rb"].each {|f| require f}
 
-
 require 'configuration_reader'
 
 describe ConfigurationReader do
@@ -13,8 +12,9 @@ describe ConfigurationReader do
   end
 
   it "should raise error in case of invalid configuration file" do
+    file_path = INSTALL_DIR + 'tests/invalid_config_history.yaml'
     expect {
-      reader = ConfigurationReader.new('invalid_config_history.yaml')
+      ConfigurationReader.new(file_path)
     }.to raise_error
   end
 end

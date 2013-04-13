@@ -3,7 +3,6 @@ general:
     log_level: 'info'
     sections:
       apache2:
-        base_directory: '/etc/apache2'
         files_matching: '*.conf'
         files_matching: 'magic'
         files_matching: 'sites-enabled/*'
