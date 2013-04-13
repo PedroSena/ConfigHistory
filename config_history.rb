@@ -2,6 +2,6 @@ require 'rubygems'
 require 'bundler/setup'
 require 'daemons'
 
-ROOT_DIR = File.dirname(__FILE__)
-Dir[ROOT_DIR + "src/**/*.rb"].each {|f| require f}
-Daemons.run('src/runner.rb')
+INSTALL_DIR = File.dirname(__FILE__)
+Dir[INSTALL_DIR + "lib/**/*.rb"].each {|f| require f}
+Daemons.run('lib/runner.rb')
