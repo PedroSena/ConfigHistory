@@ -1,0 +1,10 @@
+general:
+    time_frame: 5
+    log_level: 'info'
+    sections:
+      apache2:
+        base_directory: '/etc/apache2'
+        files_matching: '*.conf'
+        files_matching: 'magic'
+        files_matching: 'sites-enabled/*'
+        ignore_files_matching: 'sites-enabled/teste'
