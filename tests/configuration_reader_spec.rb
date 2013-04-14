@@ -1,6 +1,4 @@
-INSTALL_DIR = File.dirname(__FILE__) + '/../'
-Dir[INSTALL_DIR + "lib/**/*.rb"].each {|f| require f}
-
+require_relative 'spec_helper'
 require 'configuration_reader'
 
 describe ConfigurationReader do
