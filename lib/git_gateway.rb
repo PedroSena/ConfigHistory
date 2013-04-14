@@ -9,7 +9,16 @@ class GitGateway
 
   def new_repository
     FileUtils.mkpath(@repository_directory) unless File.directory?(@repository_directory)
-    system "cd #{@repository_directory}/ && git init ."
+    `cd #{@repository_directory}/ && git init .`
+  end
+
+  def commit
+    `#{@prefix} add #{@repository_directory}/`
+    `#{@prefix} commit -m "#{Time.now}" `
+  end
+
+  def run(command)
+    `#{@prefix} #{command}`
   end
 
 end
