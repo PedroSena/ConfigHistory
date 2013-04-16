@@ -25,7 +25,7 @@ class Section
   end
 
   def ignore?(relative_path)
-    #return false if @ignore_files_matching.length < 1
+    return false if @ignore_files_matching.length < 1
     @ignore_files_matching.select{|regex| relative_path.match regex}.length > 0
   end
 
