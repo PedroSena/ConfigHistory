@@ -3,13 +3,13 @@ require 'section'
 
 describe Section do
 
-  context "All apache files" do
+  context "All *.conf files" do
 
     before(:each) do
       @section = Section.new('apache2', '/etc/apache2', ['.*.conf'])
     end
 
-    it "should list 37 valid conf files" do
+    it "should list at least 30 valid conf files" do
       paths_to_files = @section.valid_files
       paths_to_files.length.should > 30
       paths_to_files.each do |path|
@@ -23,7 +23,7 @@ describe Section do
     end
   end
 
-  it "should list 35 valid conf files because 2 were ignored" do
+  it "should list at least 30 valid conf files because 2 were ignored" do
     section = Section.new('apache2', '/etc/apache2', ['.*.conf'], ['php5.conf'])
     paths_to_files = section.valid_files
     paths_to_files.length.should > 30
