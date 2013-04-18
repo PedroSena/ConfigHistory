@@ -8,7 +8,6 @@ git_gateway = GitGateway.new(REPO_DIR)
 loop do
   git_gateway.new_repository
   config_reader.sections.each do |section|
-    p "Section: #{section.name}"
     section.required_directories.each do |required_dir|
       FileUtils.mkpath(REPO_DIR+'/'+required_dir) unless File.exists?(required_dir)
     end
