@@ -31,7 +31,7 @@ class Section
   end
 
   def ignore?(relative_path)
-    wrap(@ignore_files_matching).select{|regex| relative_path.match regex}.length > 0
+    wrap(@ignore_files_matching).select{|regex| relative_path.match(regex)}.length > 0
   end
 
   def is_valid?(relative_path)
