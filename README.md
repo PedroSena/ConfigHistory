@@ -14,7 +14,8 @@ You will need:
 * ruby 1.9+ (I'll make it compatible with ruby1.8 in the next version)
 * git
 
-The install process itself is simple:
+The install process is simple:
+
 1.  Choose the directory where you want to install
 
 2.  Clone this project:
