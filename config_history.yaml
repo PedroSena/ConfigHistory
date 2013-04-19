@@ -1,6 +1,5 @@
 general:
     time_frame: 5
-    log_level: 'info'
     sections:
       apache2:
         base_directory: '/etc/apache2'

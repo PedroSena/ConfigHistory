@@ -10,8 +10,6 @@ class ConfigurationReader
     @time_frame = config["general"]["time_frame"]
     @time_frame = 5 unless @time_frame.is_a? Integer
     @time_frame *= 60
-    @log_level = config["general"]["log_level"]
-    @log_level = "info" unless %w(debug info warning error).include? @log_level
     @sections = []
     raise "You should have at least one section" if config["general"]["sections"].nil?
     config["general"]["sections"].each do |name,content|
