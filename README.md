@@ -23,14 +23,14 @@ The install process is simple:
 git clone git@github.com:PedroSena/ConfigHistory.git
 </pre>
 
-3.  Change config_history.yaml as you want. You can have as many sections as you want(just make sure to put them under 'sections'
+3.  Change config_history.yaml as you want. You can have as many sections as you nned (just make sure to put them under 'sections')
 
 4.  Create a start-up script(this process changes according to your OS) that runs this command:
 <pre>
-ruby <INSTALL_DIR>/ConfigHistory/config_history.rb start
+ruby INSTALL_DIR/ConfigHistory/config_history.rb start
 </pre>
 
-Where <INSTALL_DIR> is the directory you choose previously.
+Where INSTALL_DIR is the directory you choose previously.
 
 Don't call this daemon from cron, the daemon will run periodically according to the number of
 minutes you setup on config_history.yaml (time_frame variable)
