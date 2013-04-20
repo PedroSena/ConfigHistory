@@ -11,8 +11,9 @@ Install
 -------
 
 You will need:
-* ruby 1.9+ (I'll make it compatible with ruby1.8 in the next version)
+* ruby 1.9+
 * git
+* rubygems (or rvm)
 
 The install process is simple:
 
@@ -23,9 +24,14 @@ The install process is simple:
 git clone git@github.com:PedroSena/ConfigHistory.git
 </pre>
 
-3.  Change config_history.yaml as you want. You can have as many sections as you nned (just make sure to put them under 'sections')
+3.  Install the daemons gem:
+<pre>
+gem install daemons
+</pre>
 
-4.  Create a start-up script(this process changes according to your OS) that runs this command:
+4.  Change config_history.yaml as you want. You can have as many sections as you nned (just make sure to put them under 'sections')
+
+5.  Create a start-up script(this process changes according to your OS) that runs this command:
 <pre>
 ruby INSTALL_DIR/ConfigHistory/config_history.rb start
 </pre>
