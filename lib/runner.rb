@@ -12,7 +12,7 @@ Signal.trap("TERM") do
 end
 
 while not stopped
-  git_gateway.new_repository
+  git_gateway.new_repository(config_reader.remote_git)
   config_reader.sections.each do |section|
     section.required_directories.each do |required_dir|
       unless File.exists?(required_dir)
@@ -28,6 +28,6 @@ while not stopped
       end
     end
   end
-  git_gateway.commit
+  git_gateway.commit(!config_reader.remote_git.nil?)
   sleep(config_reader.time_frame)
 end
