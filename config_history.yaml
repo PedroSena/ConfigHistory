@@ -1,5 +1,6 @@
 general:
     time_frame: 5
+    remote_git: 'git@github.com:PedroSena/ConfigHistory.git'
     sections:
       apache2:
         base_directory: '/etc/apache2'
